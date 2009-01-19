@@ -1,4 +1,4 @@
-Name:       netcat-bsd
+Name:       netcat-openbsd
 Version:    1.89
 Release:    %mkrel 2
 Summary:    Reads and writes data across network connections using TCP or UDP
