@@ -1,6 +1,6 @@
 Name:       netcat-bsd
 Version:    1.89
-Release:    %mkrel 1
+Release:    %mkrel 2
 Summary:    Reads and writes data across network connections using TCP or UDP
 Group:      Networking/Other 
 License:    BSD
@@ -26,7 +26,10 @@ Patch20:    netcat-openbsd-1.89-makefile.patch
 Patch21:    netcat-openbsd-1.89-openbsd-compat.patch
 Requires:       glib2
 BuildRequires:  glib2-devel
-Conflicts:      nc
+Obsoletes:      netcat-bsd
+Provides:       netcat
+Conflicts:      netcat-traditional
+Conflicts:      netcat-gnu
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
@@ -71,8 +74,10 @@ capabilities.
 rm -rf %{buildroot}
 install -d %{buildroot}%{_bindir}
 install -m 755 nc %{buildroot}%{_bindir}
+(cd %{buildroot}%{_bindir} && ln -s nc netcat)
 install -d %{buildroot}%{_mandir}/man1
 install -m 644 nc.1 %{buildroot}%{_mandir}/man1
+(cd %{buildroot}%{_mandir}/man1 && ln -s nc.1 netcat.1)
 
 %clean
 rm -rf %{buildroot}
@@ -80,5 +85,6 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %{_bindir}/nc
+%{_bindir}/netcat
 %{_mandir}/man1/nc.1*
-
+%{_mandir}/man1/netcat.1*
