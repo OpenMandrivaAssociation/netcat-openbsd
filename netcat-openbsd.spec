@@ -1,6 +1,6 @@
 Name:       netcat-openbsd
 Version:    1.89
-Release:    %mkrel 2
+Release:    %mkrel 3
 Summary:    Reads and writes data across network connections using TCP or UDP
 Group:      Networking/Other 
 License:    BSD
@@ -27,7 +27,8 @@ Patch21:    netcat-openbsd-1.89-openbsd-compat.patch
 Requires:       glib2
 BuildRequires:  glib2-devel
 Obsoletes:      netcat-bsd
-Provides:       netcat
+Conflicts:      netcat < 1.0
+Provides:       netcat = 1.0
 Conflicts:      netcat-traditional
 Conflicts:      netcat-gnu
 BuildRoot:      %{_tmppath}/%{name}-%{version}
