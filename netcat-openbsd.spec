@@ -1,6 +1,6 @@
 Name:       netcat-openbsd
 Version:    1.89
-Release:    %mkrel 3
+Release:    %mkrel 4
 Summary:    Reads and writes data across network connections using TCP or UDP
 Group:      Networking/Other 
 License:    BSD
