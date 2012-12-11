@@ -1,6 +1,6 @@
 Name:       netcat-openbsd
 Version:    1.89
-Release:    %mkrel 4
+Release:    %mkrel 3
 Summary:    Reads and writes data across network connections using TCP or UDP
 Group:      Networking/Other 
 License:    BSD
@@ -89,3 +89,39 @@ rm -rf %{buildroot}
 %{_bindir}/netcat
 %{_mandir}/man1/nc.1*
 %{_mandir}/man1/netcat.1*
+
+
+%changelog
+* Wed Jan 21 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.89-3mdv2009.1
++ Revision: 332126
+- provides a versionned netcat virtual package
+
+* Mon Jan 19 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.89-2mdv2009.1
++ Revision: 331436
+- package renaming
+- ship netcat binary and man page
+- provides netcat virtual package
+- package renaming
+
+* Fri Jan 16 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.89-1mdv2009.1
++ Revision: 330355
+- sync with debian package
+
+* Tue Jul 29 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.84-3mdv2009.0
++ Revision: 253765
+- rebuild
+
+* Thu Jan 03 2008 Olivier Blin <oblin@mandriva.com> 1.84-1mdv2008.1
++ Revision: 140994
+- restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Sun Sep 23 2007 Herton Ronaldo Krzesinski <herton@mandriva.com.br> 1.84-1mdv2008.0
++ Revision: 92310
+- Fixed License tag (BSD instead of GPL).
+
+  + Guillaume Rousse <guillomovitch@mandriva.org>
+    - import netcat-bsd
+
