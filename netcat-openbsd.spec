@@ -4,7 +4,7 @@ Release:    4
 Summary:    Reads and writes data across network connections using TCP or UDP
 Group:      Networking/Other 
 License:    BSD
-URL:        http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/nc/
+URL:        https://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/nc/
 # source is CVS checkout
 Source0:    netcat-openbsd-%{version}.tar.gz
 Patch0:     openbsd-compat.patch
