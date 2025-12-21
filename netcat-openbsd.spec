@@ -5,6 +5,7 @@ Summary:    Reads and writes data across network connections using TCP or UDP
 Group:      Networking/Other 
 License:    BSD
 URL:        https://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/nc/
+BuildRequires:	make
 BuildRequires:	pkgconfig(libbsd)
 Obsoletes:      netcat-bsd
 Conflicts:      netcat < 1.0
